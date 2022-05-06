@@ -1,0 +1,83 @@
+*{
+    font-family: 'PT serif', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 120px 1fr 60px;
+    grid-template-columns:  1fr;
+    grid-template-areas: "cabecalho" "principal" "rodape";
+}
+
+form{
+    position: relative;
+    height: 100%;
+    overflow: scroll;
+    padding: 100px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.rodape{
+    font-family: 'Bebas Neue', cursive;
+    grid-area: rodape;
+    background-color: #c0c0c0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0px 20px;
+    color: #666666;
+}
+
+.cabecalho{
+    grid-area: cabecalho;
+    background-color: #008080;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1;
+   box-shadow: 0px 3px 10px -1px rgba(0,0,0,0.78);
+
+}
+
+.cabecalho > h1 {
+    margin: 0px;
+    font-weight: 300;
+    font-size: 2.8rem;
+}
+
+.cabecalho > h2{
+    margin: 0px;
+    font-weight: 200;
+    font-size: 1.6rem;
+}
+
+.principal{
+    grid-area: principal;
+    height: calc(100vh - 180px);
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.enviar{
+    color: green;
+}
+
+.container{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
