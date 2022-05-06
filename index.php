@@ -26,32 +26,32 @@
             <main class="principal">
                 <form method="post" id="cad_user_form">
                     Nome<br>
-                    <input type="text" name="nome" required><br>
+                    <input type="text" name="nome" id="nome" required><br>
 
                     CPF<br>
-                    <input type="text" name="CPF" required><br>
+                    <input type="text" name="cpf" id="cpf" required><br>
 
                     Idade<br>
-                    <input type="number" name="Idade" required><br>
+                    <input type="number" name="idade" id="idade" required><br>
 
                     Sexo<br>
-                    <input type="radio" name="Sexo" value="M" required>Masculino<br>
-                    <input type="radio" name="Sexo" value="F" required>Feminino<br>
+                    <input type="radio" name="sexo" id="sexo" value="M" required>Masculino<br>
+                    <input type="radio" name="sexo" id="sexo" value="F" required>Feminino<br>
 
                     Endereço<br>
-                    <input type="text" name="Endereco" required><br>
+                    <input type="text" name="endereco" id="endereco" required><br>
 
                     Grau de escolaridade<br>
-                    <input type="text" name="Escolaridade" required><br>
+                    <input type="text" name="escolaridade" id="escolaridade" required><br>
 
                     Nome do pai<br>
-                    <input type="text" name="Pai" required><br>
+                    <input type="text" name="pai" id="pai" required><br>
 
                     Nome da mãe<br>
-                    <input type="text" name="Mae" required><br>
+                    <input type="text" name="mae" id="mae" required><br>
 
                     Se descreva de forma breve<br>
-                    <textarea name="desc" required></textarea>
+                    <textarea name="descricao" id="descricao" required></textarea>
                     <br>
                     <input type="submit" class="btn btn-success" value="Cadastrar" id="cad_user"/>
 

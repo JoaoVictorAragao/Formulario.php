@@ -67,8 +67,11 @@ a{
 .principal{
     grid-area: principal;
     height: calc(100vh - 180px);
-    background-color: #f5f5f5;
-    padding: 20px;
+    
+    border-radius: 0px;
+    background: linear-gradient(315deg, #f0f0f0, #cacaca);
+    box-shadow:  -17px -17px 34px #a1a1a1,
+                 17px 17px 34px #ffffff;
 }
 
 .enviar{

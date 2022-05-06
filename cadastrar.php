@@ -3,20 +3,22 @@
 
     $bd = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-    $query = "INSERT INTO user (nome, cpf, sexo, idade, endereço, escolaridade, pai, mãe, descricao) VALUES (:nome, :cpf, :sexo, :idade, :endereço, :escolaridade, :pai, :mãe, :descricao)";
+    $query = "INSERT INTO user (nome, cpf, sexo, idade, endereco, escolaridade, pai, mae, descricao) VALUES
+     (:nome, :cpf, :sexo, :idade, :endereco, :escolaridade, :pai, :mae, :descricao)";
+   
 
-    $cad = $conn ->prepare($query);
+    $cad = $conn->prepare($query);
     $cad ->bindParam(':nome', $bd['nome']);
-    $cad ->bindParam(':CPF', $bd['CPF']);
-    $cad ->bindParam(':idade', $bd['Idade']);
-    $cad ->bindParam(':sexo', $bd['Sexo']);
-    $cad ->bindParam(':endereço', $bd['Endereco']);
-    $cad ->bindParam(':escolaridade', $bd['Escolaridade']);
-    $cad ->bindParam(':pai', $bd['Pai']);
-    $cad ->bindParam(':mãe', $bd['Mae']);
-    $cad ->bindParam(':descricao', $bd['desc']);
-
-    $cad -> execute();
+    $cad ->bindParam(':cpf', $bd['cpf']);
+    $cad ->bindParam(':sexo', $bd['sexo']);
+    $cad ->bindParam(':idade', $bd['idade']);
+    $cad ->bindParam(':endereco', $bd['endereco']);
+    $cad ->bindParam(':escolaridade', $bd['escolaridade']);
+    $cad ->bindParam(':pai', $bd['pai']);
+    $cad ->bindParam(':mae', $bd['mae']);
+    $cad ->bindParam(':descricao', $bd['descricao']);
+    $cad ->execute();
+   
 
     if($cad ->rowCount()){
         $retorna = ['erro' => false, 'msg' => "Usuário cadastrado"];
